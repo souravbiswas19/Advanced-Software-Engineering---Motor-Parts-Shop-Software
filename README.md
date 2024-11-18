@@ -12,11 +12,13 @@ To Run the Project:
 1. Setup the Database paths
 
 then run the following commands in the terminal:
-```
-Compile:
-javac -cp "libs/*;src" src/com/motorpartshop/*.java       src/com/motorpartshop/database/*.java       src/com/motorpartshop/models/*.java       src/com/motorpartshop/ui/*.java src/com/motorpartshop/dao/*.java
 
+Compile:
+```bash
+javac -cp "libs/*;src" src/com/motorpartshop/*.java       src/com/motorpartshop/database/*.java       src/com/motorpartshop/models/*.java       src/com/motorpartshop/ui/*.java src/com/motorpartshop/dao/*.java
+```
 Run:
+```bash
 java -cp "libs/*;src" src/com/motorpartshop/*.java       src/com/motorpartshop/database/*.java       src/com/motorpartshop/models/*.java       src/com/motorpartshop/ui/*.java src/com/motorpartshop/dao/*.java
 ```
 
