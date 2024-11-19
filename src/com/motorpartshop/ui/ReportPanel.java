@@ -68,6 +68,9 @@ public class ReportPanel extends JPanel {
             report.append("Sales Report:\n\n");
             report.append(String.format("%-10s %-20s %-10s %-15s %-20s\n", "Sales ID", "Part Name", "Quantity", "Total Amount", "Sales Date"));
 
+            // Initialize a variable to calculate the total sales amount
+            double totalSalesAmount = 0;
+
             // Loop through the sales list and add each entry to the report
             for (Sales sale : salesList) {
                 report.append(String.format("%-10d %-20s %-10d %-15.2f %-20s\n",
@@ -76,7 +79,14 @@ public class ReportPanel extends JPanel {
                         sale.getQuantity(),
                         sale.getTotalAmount(),
                         sale.getSalesDate().toString()));
+
+                // Accumulate the total amount
+                totalSalesAmount += sale.getTotalAmount();
             }
+
+            // Add the total sales amount to the report
+            report.append("\n");
+            report.append(String.format("Total Sales Amount: %.2f\n", totalSalesAmount));
 
             // Set the report text in the JTextArea
             reportArea.setText(report.toString());
